@@ -11,6 +11,7 @@ function Login(props) {
 
   return (
     <div className="App">
+      
       <Formik
         initialValues={{
           email: '',
@@ -43,12 +44,15 @@ function Login(props) {
           } = props;
           return (
             <div className="app">
-              <Title level={2} style={{ margin: '40px' }}>로그인</Title>
+              <div className="list">
+                  <p>로그인</p>
+              </div>
               <div style={{ position: 'relative', width: '350px', margin: '1rem auto', justifyContent: 'center'}}>
                 <form onSubmit={handleSubmit} style={{ width: '350px' }}>
-                  <text style={{ width: '350px', textAlign: 'left', fontWeight: 'bold', fontSize: '19px' }}>이메일</text>
+                  <text style={{ width: '350px', textAlign: 'left', fontWeight: 'bold', fontSize: '16px' }}>이메일</text>
                   <Form.Item required>
                     <Input
+                      style={{marginTop: 10}}
                       id="email"
                       prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
                       placeholder="이메일을 입력하세요."
@@ -65,9 +69,10 @@ function Login(props) {
                     )}
                   </Form.Item>
 
-                  <text style={{ width: '350px', textAlign: 'left', fontWeight: 'bold', fontSize: '19px' }}>비밀번호</text>
+                  <text style={{ width: '350px', textAlign: 'left', fontWeight: 'bold', fontSize: '16px' }}>비밀번호</text>
                   <Form.Item required>
                     <Input
+                      style={{marginTop: 10}}
                       id="password"
                       prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
                       placeholder="비밀번호를 입력하세요."
@@ -90,7 +95,7 @@ function Login(props) {
 
                   <Form.Item>
                     <div>
-                      <Button type="primary" htmlType="submit" className="login-form-button" style={{ minWidth: '100%' }} disabled={isSubmitting} onSubmit={handleSubmit}>
+                      <Button type="primary" htmlType="submit" className="login-form-button" style={{ minWidth: '100%', marginTop: 30, marginBottom: 10 }} disabled={isSubmitting} onSubmit={handleSubmit}>
                         로그인
                       </Button>
                     </div>

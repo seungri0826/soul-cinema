@@ -170,13 +170,9 @@ function MovieGridList(props) {
 
   return (
     <div className="App">
-      {/*
-      <div className="black-nav">
-          <div onClick={ () => {props.history.push("/")}}>소울시네마 영화 예매 시스템</div>
-      </div> */}
       <div style={{ width: '100%', margin: '0' }}>
         <div style={{ width: '85%', margin: '1rem auto' }}>
-          <h1 style={{ flexDirection: 'flex-start', alignItems: 'flex-start', margin: '25px' }}>현재 상영 중인 영화</h1>
+          <h1 style={{ flexDirection: 'flex-start', fontWeight: 600, alignItems: 'flex-start', margin: '50px' }}>현재 상영 중인 영화</h1>
           <hr />
           <Row gutter={[16, 16]}>
           {Movies && Movies.map((movie, index) => (

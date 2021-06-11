@@ -6,8 +6,6 @@ import { UploadOutlined } from '@ant-design/icons';
 
 function InsertMovie({history}) {
     
-    //데이터 형태에 따라 useState 괄호 안이 달라질 수도 있는데 일단은 이렇게 입력
-    //업로드 이미지 저장법... 
     const [title,setTitle]=useState('');
     const [time,setTime]=useState();  //3자리 숫자
     const [desc, setDesc]=useState('');
@@ -40,7 +38,8 @@ function InsertMovie({history}) {
     const { Option } = Select;
     
     const completemessage=()=>{
-        alert('등록이 완료되었습니다.')
+        alert('영화 등록이 완료되었습니다.')
+        history.push('/MovieGridList');
     }
     
     const onTitle=useCallback(e=>{
@@ -87,9 +86,6 @@ function InsertMovie({history}) {
   return (
 
     <div className="App">
-      {/*<div className="black-nav">
-          <div onClick={ () => {history.push("/")}}>소울시네마 영화 예매 시스템</div>
-      </div>*/}
 
       <div className="list">
           <p>영화정보 등록</p>
@@ -265,7 +261,7 @@ function InsertMovie({history}) {
       <Divider/>
 
     <div className="App">
-      <Button onClick={completemessage}> 예매 완료 </Button>
+      <Button type="primary" nClick={completemessage}> 등록 완료 </Button>
     </div>
 
     </div>

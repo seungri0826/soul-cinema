@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Row } from 'antd';
+import { Row, Button } from 'antd';
 import MainImage from '../commons/MainImage';
 import MovieInfo from '../sections/MovieInfo';
 
@@ -172,6 +172,10 @@ function MovieDetail(props) {
   let movieId = props.match.params.movieId;
   const [Movie, setMovie] = useState([]);
 
+  const movetoRes=()=>{
+    props.history.push('/ResMovie');
+  }
+
   useEffect(() => {
     setMovie(movie_dummy[movie_dummy.findIndex(x => x.movie_num == movieId)]);
   }, [movieId]);
@@ -180,9 +184,6 @@ function MovieDetail(props) {
 
   return (
     <div className="App">
-      {/*<div className="black-nav">
-          <div onClick={ () => {props.history.push("/")}}>소울시네마 영화 예매 시스템</div>
-      </div>*/}
       <MainImage
         image={Movie.main_img}
         title={Movie.movie_name}
@@ -203,6 +204,11 @@ function MovieDetail(props) {
         <text style={{ textAlign: 'left', fontSize: '25px', fontWeight: 'bold', marginBottom: '20px' }}>영화 소개</text>
         <text style={{ textAlign: 'left', fontSize: '19px', lineHeight: '35px', backgroundColor: '#ffffff', padding: '30px 30px', borderRadius: '10px'}}>{Movie.movie_summ}</text>
       </span>
+
+      <div className="App">
+        <Button type="primary" onClick={movetoRes}> 예매하기 </Button>
+      </div>
+
     </div>
   );
 }

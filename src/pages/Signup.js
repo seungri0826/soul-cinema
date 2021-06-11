@@ -58,12 +58,15 @@ function Signup (props) {
           } = props;
           return (
             <div className="app">
-              <Title level={2} style={{ margin: '40px' }}>회원가입</Title>
+              <div className="list">
+                  <p>회원가입</p>
+              </div>
               <div style={{ position: 'relative', width: '350px', margin: '1rem auto', justifyContent: 'center'}}>
                 <form onSubmit={handleSubmit} style={{ width: '350px' }}>
-                  <text style={{ width: '350px', textAlign: 'left', fontWeight: 'bold', fontSize: '19px' }}>이름</text>
+                  <text style={{ width: '350px', textAlign: 'left', fontWeight: 'bold', fontSize: '16px' }}>이름</text>
                   <Form.Item required>
                     <Input
+                      style={{marginTop:10}}
                       id="name"
                       prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
                       placeholder="이름을 입력하세요."
@@ -79,9 +82,10 @@ function Signup (props) {
                       <div className="input-feedback">{errors.name}</div>
                     )}
                   </Form.Item>
-                  <text style={{ width: '350px', textAlign: 'left', fontWeight: 'bold', fontSize: '19px' }}>이메일</text>
+                  <text style={{ width: '350px', textAlign: 'left', fontWeight: 'bold', fontSize: '16px' }}>이메일</text>
                   <Form.Item required>
                     <Input
+                      style={{marginTop:10}}
                       id="email"
                       prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
                       placeholder="이메일을 입력하세요."
@@ -98,9 +102,10 @@ function Signup (props) {
                     )}
                   </Form.Item>
 
-                  <text style={{ width: '350px', textAlign: 'left', fontWeight: 'bold', fontSize: '19px' }}>비밀번호</text>
+                  <text style={{ width: '350px', textAlign: 'left', fontWeight: 'bold', fontSize: '16px' }}>비밀번호</text>
                   <Form.Item required>
                     <Input
+                      style={{marginTop:10}}
                       id="password"
                       prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
                       placeholder="비밀번호를 입력하세요."
@@ -117,9 +122,10 @@ function Signup (props) {
                     )}
                   </Form.Item>
 
-                  <text style={{ width: '350px', textAlign: 'left', fontWeight: 'bold', fontSize: '19px' }}>비밀번호 확인</text>
+                  <text style={{ width: '350px', textAlign: 'left', fontWeight: 'bold', fontSize: '16px' }}>비밀번호 확인</text>
                   <Form.Item required>
                     <Input
+                      style={{marginTop:10}}
                       id="confirmPassword"
                       prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
                       placeholder="비밀번호를 다시 한 번 입력하세요."
@@ -137,9 +143,10 @@ function Signup (props) {
                   </Form.Item>
 
 
-                  <text style={{ width: '350px', textAlign: 'left', fontWeight: 'bold', fontSize: '19px' }}>생년월일</text>
+                  <text style={{ width: '350px', textAlign: 'left', fontWeight: 'bold', fontSize: '16px' }}>생년월일</text>
                   <Form.Item required>
                     <Input
+                      style={{marginTop:10}}
                       id="birthday"
                       prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
                       placeholder="생년월일(YYYYMMDD)을 입력하세요."
@@ -156,9 +163,10 @@ function Signup (props) {
                     )}
                   </Form.Item>
 
-                  <text style={{ width: '350px', textAlign: 'left', fontWeight: 'bold', fontSize: '19px' }}>연락처</text>
+                  <text style={{ width: '350px', textAlign: 'left', fontWeight: 'bold', fontSize: '16px' }}>연락처</text>
                   <Form.Item required>
                     <Input
+                      style={{marginTop:10}}
                       id="phone"
                       prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
                       placeholder="연락처(010-XXXX-XXXX)를 입력하세요."
@@ -181,7 +189,7 @@ function Signup (props) {
 
                   <Form.Item>
                     <div>
-                      <Button type="primary" htmlType="submit" className="login-form-button" style={{ minWidth: '100%' }} disabled={isSubmitting} onSubmit={handleSubmit}>
+                      <Button type="primary" htmlType="submit" className="login-form-button" style={{ minWidth: '100%', marginTop: 30, marginBottom: 10 }} disabled={isSubmitting} onSubmit={handleSubmit}>
                         회원가입
                       </Button>
                     </div>

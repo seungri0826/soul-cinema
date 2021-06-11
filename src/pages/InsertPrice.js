@@ -18,7 +18,8 @@ function InsertPrice({history}) {
     const { Option } = Select;
     
     const completemessage=()=>{
-        alert('등록이 완료되었습니다.')
+        alert('가격 등록이 완료되었습니다.')
+        history.push('/MovieGridList');
     }
 
     const onNadult=useCallback(e=>{
@@ -56,10 +57,6 @@ function InsertPrice({history}) {
 
     return(
     <div className="App">
-
-    {/*<div className="black-nav">
-        <div onClick={ () => {history.push("/")}}>소울시네마 영화 예매 시스템</div>
-    </div>*/}
 
     <div className="list">
         <p>가격 등록</p>
@@ -172,7 +169,7 @@ function InsertPrice({history}) {
 
 
     <div className="App">
-      <Button onClick={completemessage}> 등록 완료 </Button>
+      <Button  type="primary" onClick={completemessage}> 등록 완료 </Button>
     </div>
 
     </div>

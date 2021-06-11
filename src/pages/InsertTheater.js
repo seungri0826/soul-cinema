@@ -32,7 +32,8 @@ function InsertTheater({history}) {
     const { Option } = Select;
     
     const completemessage=()=>{
-        alert('등록이 완료되었습니다.')
+        alert('상영관 등록이 완료되었습니다.')
+        history.push('/MovieGridList');
     }
 
     function onForm(value) {
@@ -51,10 +52,6 @@ function InsertTheater({history}) {
     return(
     <div className="App">
 
-    {/*<div className="black-nav">
-        <div onClick={ () => {history.push("/")}}>소울시네마 영화 예매 시스템</div>
-    </div>*/}
-
     <div className="list">
         <p>상영관 등록</p>
     </div>
@@ -63,7 +60,7 @@ function InsertTheater({history}) {
           <span>상영형태 :</span>
           <span>
           <Select defaultValue="0500" style={{ paddingLeft: 10, minwidth: 40 }} onChange={onForm}>
-              <Option value="0200">상영형태</Option>
+              <Option value="0500">상영형태</Option>
               <Option value="0501">2D</Option>
               <Option value="0502">4D</Option>
               <Option value="0503">IMAX</Option>
@@ -111,7 +108,7 @@ function InsertTheater({history}) {
 
 
     <div className="App">
-      <Button onClick={completemessage}> 등록 완료 </Button>
+      <Button type="primary"  onClick={completemessage}> 등록 완료 </Button>
     </div>
 
     </div>

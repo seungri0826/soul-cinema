@@ -8,9 +8,9 @@ import './Navbar.css';
 
 function NavBar() {
   return (
-    <nav className="black-nav" style={{ position: 'fixed', zIndex: 1, alignItems: 'center', width: '100%' }}>
+    <nav className="black-nav" style={{ position: 'fixed', zIndex: 2, alignItems: 'center', width: '100%' }}>
       <div className="menu__logo">
-        <a style={{ fontSize: '25px', fontWeight: 'bold', color: '#ffffff'}} href="/MovieGridList">소울시네마</a>
+        <a style={{ fontSize: '25px', width: 500, fontWeight: 'bold', color: '#ffffff'}} href="/MovieGridList">소울시네마</a>
       </div>
       <div className="menu__container">
         <div className="menu_left">
