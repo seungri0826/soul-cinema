@@ -119,7 +119,7 @@ function ResMovie({history}) {
     <Image
       width={700}
       height={500}
-      src="http://drive.google.com/uc?export=view&id=1K6vASr21fza0cFdhFYk3HgteRtDWaMt7"
+      src="http://drive.google.com/uc?export=view&id=1gDhggQsfUSh9vonBV-i8zkX4ZIbe-gnV"
     />
     </div>
       <Input
